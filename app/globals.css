@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 4%;
+    backdrop-filter: blur(7px);
+    background-color: transparent; /* Use rgba to set an alpha value for transparency */
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    z-index: 100;
+    border: none;
+
+  }
+  .header.sticky {
+    border-bottom: 0.1rem solid rgb(0, 0, 0, 0.2);
+  }
+  .logo {
+    position: relative;
+    /* left: -100px; */
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+  }
+  .logo span {
+    color: #ff004f;
+  }
+
+  .navbar a {
+    /* justify-content: center; */
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    margin-left: 2.5rem;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    /* background-color: white; */
+    color: #ff004f;
+  }
+
+  .nav-icon{
+    position: relative;
+    /* display: inline-block; */
+    margin-left: 14px;
+    left: 20%;
+  }
+  .nav-icon a{
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 253, 253, 0.136);
+    display: inline-flex;
+    margin-right: 6px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+  .nav-icon a i{
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .nav-icon a :hover{
+    color: #ff004f;
+  }
+
+  .banner{
+    margin-top: 0;
+    padding: 260px 0 100px 0;
+    height: 100vh;
+    background-image: url('./bgimage.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .banner .tagline{
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74,47 189, 0.5));
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .banner p{
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.rem;
+    width: 96%;
+  }
+  .banner .banner-img{
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    animation: updown 3s linear infinite;
+  }
+  @keyframes updown{
+    0% {
+      transform: translateY(-20px);
+    }
+    50%{
+      transform: translateY(20px);
+    }
+    100%{
+      transform: translateY(-20px);
+    }
+  }
+  
+
+
+  @media (max-width: 768px) {
+    /* Adjust styles for screens smaller than 768px (tablets and small desktops) */
+    .header {
+      padding: 10px 2%;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none; /* Initially hide the navbar on small screens */
+      z-index: 99;
+    }
+  
+    .navbar.show {
+      display: flex; /* Show the navbar when toggled */
+    }
+  
+    .navbar a {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .nav-icon {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .nav-icon a {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .banner {
+      padding: 80px 0;
+    }
+  
+    .banner .tagline {
+      font-size: 18px;
+    }
+  
+    .banner p {
+      font-size: 16px;
+    }
+  
+    .banner .banner-img {
+      top: 5%;
+    }
+  }
+  
+  /* Additional media query for smaller iPhones */
+  @media (max-width: 480px) {
+    .header {
+      padding: 10px 2%;
+    }
+  
+    .navbar {
+      padding: 10px 0;
+    }
+  
+    .navbar a {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .nav-icon {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .nav-icon a {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .banner {
+      padding: 60px 0;
+    }
+  
+    .banner .tagline {
+      font-size: 16px;
+    }
+  
+    .banner p {
+      font-size: 14px;
+    }
+  
+    .banner .banner-img {
+      top: 5%;
+    }
+  }
