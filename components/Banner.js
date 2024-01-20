@@ -1,7 +1,7 @@
-// import { Container } from 'postcss'
 
 
-import { Row, Container, Col } from 'react-bootstrap'
+
+import { section ,Row, Container, Col } from 'react-bootstrap'
 import Image from 'next/image';
 export const Banner = () => {
   return (
