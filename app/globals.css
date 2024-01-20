@@ -81,7 +81,7 @@ body{
   .banner{
     margin-top: 0;
     padding: 260px 0 100px 0;
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url('./bgimage.jpg');
     background-position: top center;
     background-size: cover;
@@ -122,6 +122,7 @@ body{
       transform: translateY(-20px);
     }
   }
+  
   
 
 
